@@ -46,3 +46,50 @@
         a.appendChild(r)
       })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
     </script>
+
+
+function calculateAndPrintFactorial() {
+
+// Prompt the user for input and convert it to an integer
+
+let userInput = prompt("Enter a non-negative integer to find its factorial:");
+
+let num = parseInt(userInput);
+
+// Validate the input
+
+if (isNaN(num) || num < 0) {
+
+console.log("Invalid input. Please enter a non-negative integer.");
+
+return; // Exit the function if input is invalid
+
+}
+
+// Calculate the factorial
+
+let factorialResult = 1;
+
+if (num === 0 || num === 1) {
+
+factorialResult = 1; // Factorial of and 1 is 1
+
+} else {
+
+for (let i = 2; i <= num; i++) {
+
+factorialResult *= i;
+
+}
+
+}
+
+// Print the result
+
+console.log(The factorial of ${num} is: ${factorialResult}`);
+
+}
+
+// Call the function to execute it
+
+calculateAndPrintFactorial();
